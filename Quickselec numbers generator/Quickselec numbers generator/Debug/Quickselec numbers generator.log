@@ -1,0 +1,3 @@
+﻿  Quickselec numbers generator.cpp
+D:\Desktop\Code offline\Offline\Visual Studio\Quickselec numbers generator\Quickselec numbers generator\Quickselec numbers generator.cpp(9,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Quickselec numbers generator.vcxproj -> D:\Desktop\Code offline\Offline\Visual Studio\Quickselec numbers generator\Debug\Quickselec numbers generator.exe

@@ -1,0 +1,5 @@
+﻿  QuickselectLib.cpp
+C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectLib\QuickselectLib\QuickselectLib.cpp(8,1): warning C4273: 'quicselect': inconsistent dll linkage
+C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectLib\QuickselectLib\QuickselectLib.h(16,31): message : see previous definition of 'quicselect'
+     Creating library C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectLib\Debug\QuickselectLib.lib and object C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectLib\Debug\QuickselectLib.exp
+  QuickselectLib.vcxproj -> C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectLib\Debug\QuickselectLib.dll

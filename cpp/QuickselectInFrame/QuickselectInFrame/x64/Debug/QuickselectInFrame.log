@@ -1,1 +1,4 @@
-﻿  QuickselectInFrame.vcxproj -> D:\Pulpit\Code offline\Offline\Visual Studio\Projekt JA\cpp\QuickselectInFrame\x64\Debug\QuickselectInFrame.exe
+﻿  MyForm.cpp
+D:\Pulpit\cpp\QuickselectInFrame\QuickselectInFrame\MyForm.cpp(6,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  QuickselectInFrame.vcxproj -> D:\Pulpit\cpp\QuickselectInFrame\x64\Debug\QuickselectInFrame.exe

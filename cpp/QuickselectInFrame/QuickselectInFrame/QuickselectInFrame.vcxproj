@@ -81,7 +81,7 @@
       <AdditionalIncludeDirectories>..\..\QuickselectLib\QuickselectLib;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>QuickselectLib.lib;</AdditionalDependencies>
+      <AdditionalDependencies>QuickselectLib.lib;JALib.lib;</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
       <AdditionalLibraryDirectories>..\..\QuickselectLib\$(IntDir);</AdditionalLibraryDirectories>
@@ -94,7 +94,7 @@
       <AdditionalIncludeDirectories>..\..\QuickselectLib\QuickselectLib;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>QuickselectLib.lib;</AdditionalDependencies>
+      <AdditionalDependencies>QuickselectLib.lib;JALib.lib;</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
       <AdditionalLibraryDirectories>..\..\QuickselectLib\$(IntDir);</AdditionalLibraryDirectories>

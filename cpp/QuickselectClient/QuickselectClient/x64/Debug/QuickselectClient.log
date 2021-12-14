@@ -1,0 +1,3 @@
+﻿  QuickselectClient.cpp
+C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectClient\QuickselectClient\QuickselectClient.cpp(12,56): error C2660: 'quicselect': function does not take 4 arguments
+C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectLib\QuickselectLib\QuickselectLib.h(16,31): message : see declaration of 'quicselect'

@@ -3,7 +3,7 @@
 
 int main()
 {
-    int numberOdRecords = 1000;
+    int numberOdRecords = 100;
     std::fstream f1;
     f1.open("numbers.txt", std::ios::out);
     srand(time(NULL));
@@ -11,11 +11,11 @@ int main()
     f1 << numberOdRecords << std::endl;
 
     int record;
-    for (int i = 0; i < numberOdRecords - 1; i++)
+    for (int i = 0; i < numberOdRecords ; i++)
     {
         record = rand() % 100000;
         f1 << record;
-        if (i != numberOdRecords - 2)
+        if (i != numberOdRecords - 1)
         {
             f1 << std::endl;
         }

@@ -1,2 +1,0 @@
-﻿  QuickselectClient.cpp
-C:\Users\Oliwier Kania\Desktop\Code offline\Visual Studio\Projekt JA\cpp\QuickselectClient\QuickselectClient\QuickselectClient.cpp(7,10): fatal error C1083: Cannot open include file: 'SFML\Graphics.hpp': No such file or directory

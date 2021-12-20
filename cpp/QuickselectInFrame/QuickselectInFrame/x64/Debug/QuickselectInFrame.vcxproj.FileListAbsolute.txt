@@ -10,3 +10,6 @@ D:\Pulpit\Code offline\Offline\Visual Studio\Projekt JA\cpp\QuickselectInFrame\Q
 D:\Pulpit\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.MyForm.resources
 D:\Pulpit\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.GenerateResource.cache
 D:\Pulpit\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.AssemblyReference.cache
+D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.AssemblyReference.cache
+D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.MyForm.resources
+D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.GenerateResource.cache

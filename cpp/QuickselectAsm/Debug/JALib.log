@@ -1,7 +1,0 @@
-﻿  Assembling JAMasm.asm...
-  pch.cpp
-  dllmain.cpp
-  JALib.cpp
-  Generating Code...
-     Creating library D:\Pulpit\Call Asm From Cpp\Debug\JALib.lib and object D:\Pulpit\Call Asm From Cpp\Debug\JALib.exp
-  JALib.vcxproj -> D:\Pulpit\Call Asm From Cpp\Debug\JALib.dll

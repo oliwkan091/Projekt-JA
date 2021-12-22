@@ -1,4 +1,9 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (JALib.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Assembling JAMasm.asm...
+JAMasm.asm(167): warning A6004: procedure argument or local not referenced : lenArg
+JAMasm.asm(167): warning A6004: procedure argument or local not referenced : numListArg
+JAMasm.asm(167): warning A6004: procedure argument or local not referenced : kArg
+JAMasm.asm(167): warning A6004: procedure argument or local not referenced : SortBiggestArg
   pch.cpp
   dllmain.cpp
   JALib.cpp

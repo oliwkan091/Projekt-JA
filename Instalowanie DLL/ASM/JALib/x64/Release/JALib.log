@@ -1,0 +1,11 @@
+﻿  Assembling JAMasm.asm...
+JAMasm.asm(22): warning A6004: procedure argument or local not referenced : y
+  pch.cpp
+  dllmain.cpp
+  JALib.cpp
+     Creating library D:\Pulpit\Call Asm From Cpp\x64\Release\JALib.lib and object D:\Pulpit\Call Asm From Cpp\x64\Release\JALib.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 5 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  JALib.vcxproj -> D:\Pulpit\Call Asm From Cpp\x64\Release\JALib.dll

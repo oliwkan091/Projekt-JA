@@ -1,0 +1,2 @@
+Linki do bibliotek
+"../../" - oznacza wzglêdn¹ lokalizacjê z regu³y wystarczy podaæ od nazwy folderu projektu i jego pochodne

@@ -1,6 +1,2 @@
-﻿  MyForm.cpp
-D:\Pulpit\Code offline\Offline\Visual Studio\Projekt Ja\v2\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\MyForm.h(518,6): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
-D:\Pulpit\Code offline\Offline\Visual Studio\Projekt Ja\v2\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\MyForm.h(549,6): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
-D:\Pulpit\Code offline\Offline\Visual Studio\Projekt Ja\v2\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\MyForm.cpp(6,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  QuickselectInFrame.vcxproj -> D:\Pulpit\Code offline\Offline\Visual Studio\Projekt Ja\v2\Projekt-JA\cpp\QuickselectInFrame\x64\Debug\QuickselectInFrame.exe
+﻿  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  QuickselectInFrame.vcxproj -> D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\x64\Debug\QuickselectInFrame.exe

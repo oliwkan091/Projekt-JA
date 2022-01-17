@@ -1,12 +1,11 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (JALib.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Assembling JAMasm.asm...
-JAMasm.asm(167): warning A6004: procedure argument or local not referenced : lenArg
-JAMasm.asm(167): warning A6004: procedure argument or local not referenced : numListArg
-JAMasm.asm(167): warning A6004: procedure argument or local not referenced : kArg
-JAMasm.asm(167): warning A6004: procedure argument or local not referenced : SortBiggestArg
-  pch.cpp
-  dllmain.cpp
-  JALib.cpp
-  Generating Code...
-     Creating library D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\x64\Debug\JALib.lib and object D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\x64\Debug\JALib.exp
-  JALib.vcxproj -> D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\x64\Debug\JALib.dll
+JAMasm.asm(10): error A2008: syntax error : length
+JAMasm.asm(33): error A2081: missing operand after unary operator
+JAMasm.asm(46): error A2081: missing operand after unary operator
+JAMasm.asm(49): error A2081: missing operand after unary operator
+JAMasm.asm(142): warning A6004: procedure argument or local not referenced : lengthArg
+JAMasm.asm(142): warning A6004: procedure argument or local not referenced : numbersArg
+JAMasm.asm(142): warning A6004: procedure argument or local not referenced : nthArg
+JAMasm.asm(142): warning A6004: procedure argument or local not referenced : bigSmallArg
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Debug\JAMasm.obj" /W3 /errorReport:prompt  /TaJAMasm.asm" exited with code 1.

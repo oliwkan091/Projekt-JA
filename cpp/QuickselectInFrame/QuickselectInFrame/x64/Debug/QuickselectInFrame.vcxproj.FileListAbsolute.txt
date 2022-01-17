@@ -13,3 +13,9 @@ D:\Pulpit\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame
 D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.AssemblyReference.cache
 D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.MyForm.resources
 D:\Pulpit\Code offline\Offline\Git\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.GenerateResource.cache
+D:\Pulpit\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.AssemblyReference.cache
+D:\Pulpit\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.MyForm.resources
+D:\Pulpit\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.GenerateResource.cache
+D:\Pulpit\Code offline\Offline\Visual Studio\Projekt Ja\v2\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.AssemblyReference.cache
+D:\Pulpit\Code offline\Offline\Visual Studio\Projekt Ja\v2\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.MyForm.resources
+D:\Pulpit\Code offline\Offline\Visual Studio\Projekt Ja\v2\Projekt-JA\cpp\QuickselectInFrame\QuickselectInFrame\x64\Debug\QuickselectInFrame.vcxproj.GenerateResource.cache

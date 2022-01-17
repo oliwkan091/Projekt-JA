@@ -1,5 +1,6 @@
 #pragma once
 
+#include <direct.h>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -31,7 +32,7 @@ namespace QuickselectInFrame {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
-		public:
+	public:
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -91,6 +92,34 @@ namespace QuickselectInFrame {
 	protected:
 
 	private:
+
+		//Zarz¹dza wielow¹tkowym dzia³aniem assemblera
+		static void quickselectASMMan(int dataLength, int* tab, int k, bool biggest, int threedID, int numberOfElements)
+		{
+			//Wywo³uje funkcjê assemblera po kolei tyle razy ile podano 
+			for (int i = 0; i < numberOfElements; i++)
+			{
+				//Kopiuje wartoœci podane na wejœciu by nie nadpisaæ orygina³ów i zapisuje je do 8 bitówych intów u¿ywanych w assemblerze
+				__int64* len = new __int64(dataLength);
+				__int64* numList = new __int64[*len];
+				for (int j = 0; j < *len; j++)
+				{
+					numList[j] = tab[j];
+				}
+				__int64* k2 = new __int64(k);
+				__int64* sortBiggest = new __int64(biggest);
+				
+				//Wywo³uje funkcjê odpowiedzialn¹ za obs³ugê assemblera 
+				quickselectAsm(len,numList,k2,sortBiggest, threedID + i);
+
+				//Po zurzyciu danych usuwa
+				delete len;
+				delete[] numList;
+				delete k2;
+				delete sortBiggest;
+			}
+
+		}
 
 		//Obs³uguje algorytm quicksort w jêzyku cpp
 		static void quickselectCpp(int dataLength, int tab[], int k, bool biggest,bool qError,std::string qErrorMsg,int threadID)
@@ -486,6 +515,8 @@ namespace QuickselectInFrame {
 				if (comboBoxCppAsm->Text == "CPP")
 				{
 
+					mkdir("CPP\\");
+
 					std::vector <std::thread> threadList;
 					std::string qErrorMsg;
 
@@ -514,56 +545,52 @@ namespace QuickselectInFrame {
 				//Sekcja Asm
 				else if (comboBoxCppAsm->Text == "ASM")
 				{
-					/*
-					__int64* len = new __int64(7);
-					__int64* numList = new __int64[*len];
-					numList[0] = 10;
-					numList[1] = 20;
-					numList[2] = 30;
-					numList[3] = 40;
-					numList[4] = 50;
-					numList[5] = 60;
-					numList[6] = 70;
-					__int64* k = new __int64(7);
-					__int64* sortBiggest = new __int64(1);
-					__int64 i = otherFunc(len, numList, k, sortBiggest);
-					int z = (int)i;
-					labelTime->Text = stringtosstring(std::to_string(z));*/
 
+					mkdir("ASM\\");
 
-					//Poniewa¿ algorytm ASM ko¿ysta z zmiennych int 8 bajtowych (__int64) to wpierw wszystkie dane trzeba przekszta³ciæ
+					int sortBiggest;
+					if (sStringToString(comboBoxDesc->Text) == "Najmniejszy") { sortBiggest = 1; }
+					else { sortBiggest = 0; }
 
-					__int64* len = new __int64(dataLength);
-
-					__int64* numList = new __int64[*len];
-					for (int i = 0; i < dataLength; i++)
+					/*for (int i = 0; i < threadsNumber; i++)
 					{
-						numList[i] = tab[i];
+						quickselectAsm(len, numList, kParm, sortBiggest, i);
+					}*/
+
+
+					//Przy wywo³ywaniu du¿ej iloœci równoleg³ych w¹tków dla funkcji assemblera dochodzi³o do b³êdów
+					//Dlatego wywo³ywane jest naraz tyle w¹tków ile rdzeni ma processor by w miarê zoptymalizowaæ 
+
+					//Sprawdza iloœc rdzeni komputera
+					int coreNumber = std::thread::hardware_concurrency();
+
+					//Rozdziela iloœæ wywo³añ dla w¹tku
+					int modulo = threadsNumber % coreNumber;
+					int devided = threadsNumber / coreNumber;
+					int *elementTab = new int[coreNumber];
+
+					for (int i = 0; i< coreNumber; i++)
+					{
+						elementTab[i] = devided;
+						//Je¿eli dzielenie jest nieca³kowite to trzeba dodaæ po jednym wykonaniu w miarê po równo 
+						if (i < modulo)
+						{
+							elementTab[i] += 1;
+						}
 					}
 
-					__int64* kParm = new __int64(k);
-
-					__int64* sortBiggest;
-
-					if (sStringToString(comboBoxDesc->Text) == "Najmniejszy") { sortBiggest = new __int64(1); }
-					else { sortBiggest = new __int64(0); }
-
-
-					//Wszystko dzia³a tak samo jak w CPP
-
-
-					std::vector <std::thread> threadList;
-
-					for (int i = 0; i < threadsNumber; i++)
-					{
-						threadList.push_back(std::thread(quickselectAsm, len, numList, kParm, sortBiggest,i));
-					}
-
+					int startElement = 0;
+					//Zaczyna liczyæ czas
 					auto start = std::chrono::high_resolution_clock::now();
 
-					for (int i = 0; i < threadsNumber; i++)
+					for (int i = 0; i < coreNumber; i++)
 					{
-						threadList[i].join();
+						if (elementTab[i] != 0)
+						{
+							std::thread th(quickselectASMMan, dataLength, tab, k, sortBiggest, startElement, elementTab[i]);
+							th.join();
+							startElement += elementTab[i];
+						}
 					}
 
 					auto stop = std::chrono::high_resolution_clock::now();
@@ -571,11 +598,9 @@ namespace QuickselectInFrame {
 					auto milisec = duration.count();
 
 					labelTime->Text = "Czas trwanie: " + milisec + " milisekund";
-
-					if (numList != nullptr)
-					{
-						delete[] numList;
-					}
+					
+					//Nigdy nie jest nullptr
+					delete[] elementTab;
 				}
 
 				labelError->Text = "Zakoñczono";

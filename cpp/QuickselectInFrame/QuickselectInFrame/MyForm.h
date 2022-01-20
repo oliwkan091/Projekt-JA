@@ -509,10 +509,6 @@ namespace QuickselectInFrame {
 				//Sekcja Cpp
 				if (comboBoxCppAsm->Text == "CPP")
 				{
-					/*std::fstream fz;
-					fz.open("TimeRes.txt", std::ios::out);
-					for (threadsNumber = 5; threadsNumber >= 1; threadsNumber--)
-					{*/
 						//Je¿eli nie ma to tworzy folder
 						mkdir("CPP\\");
 
@@ -558,15 +554,12 @@ namespace QuickselectInFrame {
 						auto stop = std::chrono::high_resolution_clock::now();
 						auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
 						auto milisec = duration.count();
-
-						/*fz << threadsNumber;
+						std::fstream fz;
+						fz.open("TimeRes.txt", std::ios::out);
 						fz << milisec;
-						fz << "\n";*/
+						fz << "\n";
+						fz.close();
 						labelTime->Text = "Czas trwanie: " + milisec + " milisekund";
-					/*}
-
-					fz.close();*/
-
 				}
 				//Sekcja Asm
 				else if (comboBoxCppAsm->Text == "ASM")
@@ -578,9 +571,6 @@ namespace QuickselectInFrame {
 					__int64* sortBiggest = nullptr;
 					if (sStringToString(comboBoxDesc->Text) == "Najmniejszy") { sortBiggest = new __int64(1); }
 					else { sortBiggest = new __int64(0); }
-
-					//Przy wywo³ywaniu du¿ej iloœci równoleg³ych w¹tków dla funkcji assemblera dochodzi³o do b³êdów
-					//Dlatego wywo³ywane jest naraz tyle w¹tków ile rdzeni ma processor by w miarê zoptymalizowaæ 
 
 					__int64* len = new __int64(dataLength);
 					__int64* numList = new __int64[*len];
@@ -626,6 +616,12 @@ namespace QuickselectInFrame {
 					auto stop = std::chrono::high_resolution_clock::now();
 					auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
 					auto milisec = duration.count();
+
+					std::fstream fz;
+					fz.open("TimeRes.txt", std::ios::out);
+					fz << milisec;
+					fz << "\n";
+					fz.close();
 
 					labelTime->Text = "Czas trwanie: " + milisec + " milisekund";
 					

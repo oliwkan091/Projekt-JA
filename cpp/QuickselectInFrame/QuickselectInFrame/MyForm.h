@@ -422,6 +422,11 @@ namespace QuickselectInFrame {
 			try 
 			{
 				threadsNumber = std::stoi(sStringToString(comboBoxCore->Text));
+				if ((threadsNumber < 1) || (threadsNumber > 64))
+				{
+					qError = true;
+					labelError->Text = "Z³a iloœæ w¹tków";
+				}
 			}
 			catch (std::exception e)
 			{
